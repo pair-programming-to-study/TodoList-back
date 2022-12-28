@@ -1,22 +1,10 @@
 package com.example.pairprogrammingtostudy.repository;
 
 import com.example.pairprogrammingtostudy.domain.TodoList;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import javax.persistence.EntityManager;
+public interface TodoListRepository extends JpaRepository<TodoList, Long> {
 
-@Repository
-@RequiredArgsConstructor
-public class TodoListRepository {
 
-    private final EntityManager em;
-
-    public void Save(TodoList todoList) {
-
-        em.persist(todoList);
-
-    }
 
 }

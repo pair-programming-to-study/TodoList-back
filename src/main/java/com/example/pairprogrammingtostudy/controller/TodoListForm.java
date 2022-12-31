@@ -8,6 +8,6 @@ import lombok.Setter;
 @NoArgsConstructor
 public class TodoListForm {
 
-    private String content;
+    private String todo;
 
 }

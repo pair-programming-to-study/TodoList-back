@@ -5,8 +5,9 @@ plugins {
 }
 
 group = 'com.example'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.1'
 sourceCompatibility = '11'
+
 
 configurations {
     compileOnly {
@@ -30,4 +31,9 @@ dependencies {
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+// 2. plain 파일 생성하지 않는 설정
+jar {
+    enabled = false
 }
